@@ -456,13 +456,13 @@
                 </div>
 
                 <div class="form-meta-note">
-                  <span>* Required fields. All project information and client briefs remain strictly confidential.</span>
+                  <span>* Required fields. All briefs are sent directly to our principal design team via WhatsApp (+91 78270 56152) for immediate consultation.</span>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="form-submit-row">
                   <button type="submit" class="btn btn-black btn-submit" id="submitBtn">
-                    <span>Start a Conversation</span>
+                    <span>Transmit Brief via WhatsApp</span>
                     <span class="arrow" aria-hidden="true">→</span>
                   </button>
                 </div>
@@ -859,7 +859,7 @@
         }
       }
 
-      // Production-ready Form Handler with elegant feedback
+      // Production WhatsApp Direct Inquiry Form Handler
       const form = document.getElementById('studioContactForm');
       const alertBox = document.getElementById('formAlertBox');
       const submitBtn = document.getElementById('submitBtn');
@@ -869,31 +869,53 @@
           e.preventDefault();
 
           const name = document.getElementById('contactName').value.trim();
+          const company = document.getElementById('contactCompany').value.trim();
           const email = document.getElementById('contactEmail').value.trim();
           const phone = document.getElementById('contactPhone').value.trim();
+          const projectTypeSelect = document.getElementById('contactProjectType');
+          const projectType = projectTypeSelect && projectTypeSelect.value ? projectTypeSelect.options[projectTypeSelect.selectedIndex].text : '';
+          const timeline = document.getElementById('contactTimeline').value.trim();
+          const location = document.getElementById('contactLocation').value.trim();
           const details = document.getElementById('contactDetails').value.trim();
 
-          if (!name || !email || !phone || !details) {
+          if (!name || !email || !phone || !details || !projectTypeSelect.value) {
             alertBox.className = 'form-alert is-error';
             alertBox.textContent = 'Please complete all required fields (*).';
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             return;
           }
+
+          // Build clean, professional structured WhatsApp message
+          let waMsg = `🏛️ *NEW PROJECT BRIEF — RSON DESIGN STUDIO*\n\n`;
+          waMsg += `👤 *Client Name:* ${name}\n`;
+          if (company) waMsg += `🏢 *Company / Studio:* ${company}\n`;
+          waMsg += `📞 *Phone Number:* ${phone}\n`;
+          waMsg += `📧 *Email Address:* ${email}\n\n`;
+          waMsg += `📌 *Discipline:* ${projectType}\n`;
+          if (location) waMsg += `📍 *Location / Venue:* ${location}\n`;
+          if (timeline) waMsg += `⏱️ *Target Timeline:* ${timeline}\n\n`;
+          waMsg += `📝 *Project Scope & Details:*\n${details}\n\n`;
+          waMsg += `_Transmitted via RSON Design Studio Website_`;
+
+          const waUrl = `https://wa.me/917827056152?text=${encodeURIComponent(waMsg)}`;
 
           // Visual loading state
           const originalBtnHtml = submitBtn.innerHTML;
           submitBtn.disabled = true;
-          submitBtn.innerHTML = '<span>Transmitting Brief...</span>';
+          submitBtn.innerHTML = '<span>Opening WhatsApp...</span>';
 
-          // Simulate brief submission or hook to service
+          // Show elegant success feedback with direct fallback link
+          alertBox.className = 'form-alert is-success';
+          alertBox.innerHTML = `<strong>Inquiry Formatted!</strong> Opening WhatsApp to send your project brief directly to RSON Studio.<br><br>Agar WhatsApp automatically open na ho, toh <a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="color: #0E0E0E; text-decoration: underline; font-weight: 700;">yahan click karein (Open in WhatsApp)</a>.`;
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+          // Direct WhatsApp trigger
+          window.open(waUrl, '_blank');
+
           setTimeout(() => {
-            alertBox.className = 'form-alert is-success';
-            alertBox.innerHTML = `<strong>Thank you, ${name}.</strong> Your project inquiry has been received. Our senior studio director will review your brief and contact you within 24 business hours.`;
-            form.reset();
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnHtml;
-            // Scroll alert into view comfortably
-            alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 800);
+          }, 1500);
         });
       }
 
