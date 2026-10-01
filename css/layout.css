@@ -482,3 +482,148 @@
     gap: var(--space-sm);
   }
 }
+
+/* ==========================================================================
+   04. ARCHITECTURAL FLOATING WHATSAPP BUTTON (BESPOKE STUDIO AESTHETIC)
+   ========================================================================== */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 995;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 12px;
+  background-color: rgba(14, 14, 14, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 139, 100, 0.42);
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background-color 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.floating-whatsapp-btn:hover,
+.floating-whatsapp-btn:focus-visible {
+  transform: translateY(-3px) scale(1.02);
+  background-color: #000000;
+  border-color: var(--accent);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.32), 0 0 20px rgba(168, 139, 100, 0.25);
+  outline: none;
+}
+
+.floating-wa-icon-wrap {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp-btn:hover .floating-wa-icon-wrap {
+  transform: scale(1.06);
+}
+
+.floating-wa-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.floating-wa-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  background-color: #25D366;
+  border: 2px solid #0E0E0E;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  animation: waPulseDot 2s infinite;
+}
+
+@keyframes waPulseDot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.floating-wa-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.floating-wa-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.floating-wa-status {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  color: var(--accent);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 600px) {
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 14px 8px 10px;
+    gap: 10px;
+  }
+  .floating-wa-icon-wrap {
+    width: 32px;
+    height: 32px;
+  }
+  .floating-wa-svg {
+    width: 18px;
+    height: 18px;
+  }
+  .floating-wa-status {
+    display: none;
+  }
+  .floating-wa-label {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .floating-whatsapp-btn {
+    padding: 8px;
+    border-radius: 50%;
+  }
+  .floating-wa-text {
+    display: none;
+  }
+}
+
