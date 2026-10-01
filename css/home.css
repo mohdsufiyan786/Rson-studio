@@ -278,7 +278,7 @@
 
 .pillar-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
 
@@ -1306,11 +1306,11 @@
   }
   .pillar-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: var(--space-xs) !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-sm) !important;
   }
   .pillar-card {
-    aspect-ratio: 1 / 1.05;
+    aspect-ratio: 16 / 9;
     border-radius: var(--radius-subtle);
   }
   .pillar-overlay {
