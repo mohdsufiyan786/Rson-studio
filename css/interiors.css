@@ -994,33 +994,49 @@
 
 @media (max-width: 768px) {
   .interiors-hero {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .interiors-hero-title {
+    font-size: clamp(2rem, 7.8vw, 2.65rem);
+    line-height: 1.12;
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Hide long intro subtitle on mobile so imagery takes center stage */
+  .interiors-hero-subtitle {
+    display: none !important;
   }
 
   .interiors-hero-visual {
     aspect-ratio: 16 / 10;
+    border-radius: var(--radius-subtle);
   }
 
   .interiors-hero-badge {
-    bottom: var(--space-sm);
-    left: var(--space-sm);
-    right: var(--space-sm);
-    padding: 10px 14px;
+    bottom: var(--space-xs);
+    left: var(--space-xs);
+    right: var(--space-xs);
+    padding: 8px 12px;
   }
 
   .featured-interior-section {
-    padding-top: var(--space-3xl);
-    padding-bottom: var(--space-3xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
 
   .featured-info-pane {
-    padding: var(--space-xl) var(--space-md);
+    padding: var(--space-md);
+  }
+
+  /* Hide long description on featured composition */
+  .featured-description {
+    display: none !important;
   }
 
   .featured-specs-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+    display: none !important;
   }
 
   .filter-bar-container {
@@ -1028,8 +1044,21 @@
     align-items: flex-start;
   }
 
+  .filter-pills-list {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: var(--space-xs);
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-pills-list::-webkit-scrollbar {
+    display: none;
+  }
+
   .editorial-gallery-grid {
-    gap: var(--space-2xl);
+    gap: var(--space-md);
   }
 
   .span-7 .card-media-wrap,
@@ -1041,26 +1070,82 @@
   }
 
   .card-content-wrap {
-    padding: var(--space-lg) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  /* Hide project card text paragraphs on mobile */
+  .card-desc {
+    display: none !important;
+  }
+
+  .card-specs-row:nth-child(n+2) {
+    display: none;
+  }
+
+  .card-specs-row {
+    padding: 0.25rem 0;
+    font-size: 0.74rem;
   }
 
   .capabilities-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-xs);
+  }
+
+  .capability-card {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .capability-title {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Hide capability narrative on mobile */
+  .capability-desc {
+    display: none !important;
   }
 
   .story-timeline {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
+    gap: var(--space-xs);
+  }
+
+  .story-card {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .story-step {
+    font-size: 0.68rem;
+  }
+
+  .story-title {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  /* Hide story description on mobile */
+  .story-desc {
+    display: none !important;
+  }
+
+  .cta-description {
+    display: none !important;
   }
 
   .cta-actions-row {
     flex-direction: column;
     width: 100%;
+    gap: var(--space-xs);
   }
 
   .cta-actions-row .btn {
     width: 100%;
+    justify-content: center;
   }
 }
 

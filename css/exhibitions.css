@@ -769,24 +769,37 @@
 
 @media (max-width: 768px) {
   .exhibitions-hero {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .exhibitions-hero-title {
+    font-size: clamp(2rem, 7.8vw, 2.65rem);
+    line-height: 1.12;
+    margin-bottom: var(--space-xs);
+  }
+
+  /* Hide long intro on mobile so the architectural visual is front and center */
+  .exhibitions-hero-intro {
+    display: none !important;
   }
 
   .exhibitions-hero-visual {
     aspect-ratio: 16 / 10;
+    border-radius: var(--radius-subtle);
   }
 
   .exhibitions-hero-badge {
-    bottom: var(--space-sm);
-    left: var(--space-sm);
+    bottom: var(--space-xs);
+    left: var(--space-xs);
+    right: var(--space-xs);
     padding: 8px 12px;
   }
 
   .filter-bar-section {
     position: static;
-    padding-top: var(--space-lg);
-    padding-bottom: var(--space-md);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-sm);
   }
 
   .filter-pills-list {
@@ -812,22 +825,26 @@
   }
 
   .featured-project-section {
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
 
   .featured-info-pane {
-    padding: var(--space-lg);
+    padding: var(--space-md);
+  }
+
+  /* Hide long description on mobile */
+  .featured-description {
+    display: none !important;
   }
 
   .featured-specs-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
+    display: none !important;
   }
 
   .editorial-gallery-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+    gap: var(--space-md);
   }
 
   .span-col-8,
@@ -840,21 +857,43 @@
   }
 
   .span-col-12 {
-    margin: var(--space-md) 0;
-    padding: var(--space-md) 0;
+    margin: var(--space-xs) 0;
+    padding: var(--space-xs) 0;
   }
 
   .span-col-4 .exhibit-image-wrap {
-    aspect-ratio: 16 / 10; /* Better aspect on mobile than tall vertical */
+    aspect-ratio: 16 / 10;
+  }
+
+  .exhibit-meta-wrap {
+    padding-top: var(--space-xs);
+  }
+
+  .exhibit-title {
+    font-size: 1.15rem;
+  }
+
+  /* Hide sub-client text on mobile */
+  .exhibit-client-sub {
+    display: none !important;
   }
 
   .exhibitions-cta {
-    padding-top: var(--space-3xl);
-    padding-bottom: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .exhibitions-cta-desc {
+    display: none !important;
   }
 
   .exhibitions-cta-specs {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-xs);
+  }
+
+  .exhibitions-cta-actions .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
