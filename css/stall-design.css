@@ -1,0 +1,693 @@
+/* ==========================================================================
+   RSON DESIGN STUDIO — STALL DESIGN PAGE & MULTI-ANGLE GALLERY STYLES
+   Editorial Light Aesthetic strictly matching design-system.css & layout.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. STALL DESIGN HERO
+   -------------------------------------------------------------------------- */
+.stalls-hero {
+  padding-top: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-hairline);
+  position: relative;
+}
+
+.stalls-hero-inner {
+  max-width: 980px;
+}
+
+.stalls-meta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--accent-beige);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.stalls-meta-divider {
+  color: var(--border-light);
+}
+
+.stalls-hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.stalls-hero-intro {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin-bottom: var(--space-xl);
+}
+
+.stalls-stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2.5rem);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.stalls-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stalls-stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.stalls-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   02. FILTER BAR
+   -------------------------------------------------------------------------- */
+.stalls-filter-section {
+  padding: 1.25rem 0;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-hairline);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 850;
+  transition: box-shadow var(--transition-base);
+}
+
+.stalls-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.stalls-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.stalls-filter-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.stall-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.stall-pill:hover {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.stall-pill.active {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+  border-color: var(--bg-dark);
+}
+
+.stall-pill-count {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-beige);
+}
+
+.stalls-hint-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   03. STALL DESIGN CARDS EDITORIAL GRID
+   -------------------------------------------------------------------------- */
+.stalls-grid-section {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+  background-color: var(--bg-primary);
+}
+
+.stalls-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.75rem, 3.5vw, 3rem);
+}
+
+.stall-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.stall-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-dark);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+}
+
+/* Primary Visual Frame */
+.stall-card-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.stall-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.stall-card:hover .stall-card-img {
+  transform: scale(1.03);
+}
+
+.stall-angles-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background-color: rgba(17, 18, 20, 0.85);
+  color: #FFFFFF;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.stall-angles-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-beige);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.stall-click-cue {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: var(--space-sm);
+  background-color: rgba(255, 255, 255, 0.94);
+  color: var(--text-primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all var(--transition-fast);
+}
+
+.stall-card:hover .stall-click-cue {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Angles Thumbnails Mini Strip (Showing 3 extra views directly on the card) */
+.stall-thumbs-mini-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+  background-color: var(--border-hairline);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.stall-mini-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast), filter var(--transition-fast);
+  cursor: pointer;
+}
+
+.stall-mini-thumb:hover {
+  opacity: 1;
+}
+
+/* Content Area */
+.stall-card-content {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.stall-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.stall-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-beige);
+  letter-spacing: 0.1em;
+}
+
+.stall-category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stall-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 1.8vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.stall-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.stall-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-sm);
+  border-top: 1px dashed var(--border-hairline);
+}
+
+.stall-view-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.stall-view-all-link .arrow {
+  transition: transform var(--transition-fast);
+}
+
+.stall-card:hover .stall-view-all-link {
+  color: var(--accent-beige);
+}
+
+.stall-card:hover .stall-view-all-link .arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   04. FULL-FEATURED 3D MULTI-ANGLE LIGHTBOX MODAL
+   -------------------------------------------------------------------------- */
+.stall-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(17, 18, 20, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.stall-modal-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.stall-modal-container {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-subtle);
+  width: 100%;
+  max-width: 1200px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stall-modal-backdrop.is-open .stall-modal-container {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header Bar */
+.stall-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.stall-modal-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.modal-stall-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-beige);
+}
+
+.modal-stall-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-close-btn {
+  background: none;
+  border: 1px solid var(--border-light);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background-color: var(--bg-dark);
+  color: #FFFFFF;
+  border-color: var(--bg-dark);
+  transform: rotate(90deg);
+}
+
+/* Modal Main Stage (Large Image + Nav Arrows) */
+.stall-modal-stage {
+  position: relative;
+  width: 100%;
+  background-color: #0E0F12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  max-height: 60vh;
+  overflow: hidden;
+}
+
+.modal-main-image {
+  max-width: 100%;
+  max-height: 58vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Modal Prev / Next Navigation Arrows */
+.modal-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.modal-nav-arrow:hover {
+  background-color: #FFFFFF;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.modal-nav-prev {
+  left: var(--space-md);
+}
+
+.modal-nav-next {
+  right: var(--space-md);
+}
+
+.modal-angle-counter-badge {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(17, 18, 20, 0.85);
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Thumbnails Strip */
+.stall-modal-thumbs-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+  overflow-x: auto;
+}
+
+.modal-thumb-btn {
+  background: none;
+  border: 2px solid transparent;
+  padding: 2px;
+  border-radius: var(--radius-subtle);
+  cursor: pointer;
+  width: 80px;
+  height: 52px;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+.modal-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-thumb-btn:hover {
+  opacity: 0.9;
+  border-color: var(--border-dark);
+}
+
+.modal-thumb-btn.active {
+  opacity: 1;
+  border-color: var(--accent-beige);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Details & Action Footer */
+.stall-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: 1rem 1.5rem;
+  background-color: #FFFFFF;
+}
+
+.modal-specs-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modal-specs-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.modal-inquire-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-dark);
+  color: #FFFFFF;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.modal-inquire-btn:hover {
+  background-color: #26282E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   05. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .stalls-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stall-modal-container {
+    max-height: 96vh;
+  }
+
+  .stall-modal-stage {
+    min-height: 260px;
+  }
+
+  .modal-thumb-btn {
+    width: 64px;
+    height: 42px;
+  }
+
+  .stall-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .modal-inquire-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .stalls-hero {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .stalls-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .modal-stall-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-nav-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
