@@ -601,6 +601,176 @@
   transform: translate(2px, -2px);
 }
 
+/* Location Tab Switcher Navigation */
+.location-tabs-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--space-md);
+  padding-bottom: 4px;
+}
+
+.location-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.location-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.location-tab-btn .tab-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-beige);
+}
+
+.location-tab-btn:hover {
+  border-color: var(--border-light);
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.location-tab-btn.active {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+  border-color: var(--bg-dark);
+}
+
+.location-tab-btn.active .tab-num {
+  color: var(--accent-beige);
+}
+
+/* 4-Card Editorial Facility Matrix */
+.location-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.75rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.location-facility-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  position: relative;
+  cursor: pointer;
+}
+
+.location-facility-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--text-primary);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+.location-facility-card.active {
+  border-color: var(--accent-beige);
+  box-shadow: 0 8px 24px rgba(168, 139, 100, 0.12);
+}
+
+.facility-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.facility-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-beige);
+  font-weight: 600;
+}
+
+.facility-region {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.facility-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.01em;
+}
+
+.facility-address {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.facility-role {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.facility-card-footer {
+  border-top: 1px dashed var(--border-hairline);
+  padding-top: var(--space-sm);
+}
+
+.facility-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.facility-maps-link .arrow {
+  transition: transform var(--transition-fast);
+}
+
+.facility-maps-link:hover {
+  color: var(--accent-beige);
+}
+
+.facility-maps-link:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
 /* --------------------------------------------------------------------------
    04. FINAL CTA SECTION
    -------------------------------------------------------------------------- */
@@ -655,6 +825,12 @@
 /* --------------------------------------------------------------------------
    05. RESPONSIVE MEDIA QUERIES (INTENTIONAL MOBILE LAYOUT)
    -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .location-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
   .contact-grid {
     grid-template-columns: 1fr;
@@ -672,6 +848,10 @@
 }
 
 @media (max-width: 768px) {
+  .location-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
   .contact-hero {
     padding-top: 2.25rem;
     padding-bottom: 2.25rem;
