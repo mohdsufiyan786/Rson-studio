@@ -1,0 +1,668 @@
+/* ==========================================================================
+   RSON DESIGN STUDIO — CONTACT PAGE STYLES (EDITORIAL LIGHT AESTHETIC)
+   Strictly complies with locked design tokens in design-system.css & layout.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. CONTACT HERO
+   -------------------------------------------------------------------------- */
+.contact-hero {
+  padding-top: clamp(3rem, 6vw, 5.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-hairline);
+  position: relative;
+}
+
+.contact-hero-inner {
+  max-width: 980px;
+}
+
+.contact-meta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--accent-beige);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.contact-meta-divider {
+  color: var(--border-light);
+}
+
+.contact-hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-hero-intro {
+  font-family: var(--font-sans);
+  font-size: clamp(1.15rem, 1.8vw, 1.38rem);
+  line-height: 1.55;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+/* --------------------------------------------------------------------------
+   02. MAIN CONTACT SECTION (2-COLUMN EDITORIAL GRID)
+   -------------------------------------------------------------------------- */
+.contact-main-section {
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0;
+  background-color: var(--bg-primary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+/* --- Left Column: Studio Information & Coordinates --- */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-beige);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.contact-info-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.5vw, 2.25rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.015em;
+}
+
+.contact-channels-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.contact-channel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.channel-value {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.channel-value a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.channel-value a:hover {
+  color: var(--accent-beige);
+}
+
+.channel-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Quick Action Tap Buttons (Touch-friendly & Desktop) */
+.contact-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.btn-whatsapp-direct {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: 1px solid #25D366;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp-direct:hover {
+  background-color: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+/* Project Enquiry Guidance Card */
+.enquiry-guide-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--accent-beige);
+  border-radius: var(--radius-subtle);
+  padding: clamp(1.25rem, 2.5vw, 1.85rem);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.enquiry-guide-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.enquiry-guide-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.enquiry-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.enquiry-tip-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.enquiry-tip-dot {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-beige);
+}
+
+/* Social & Follow Links */
+.contact-social-section {
+  padding-top: var(--space-md);
+}
+
+.social-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.social-pill-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.social-pill-link:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* --- Right Column: Premium Minimal Contact Form --- */
+.contact-form-col {
+  position: relative;
+}
+
+.contact-form-wrapper {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  padding: clamp(2rem, 4vw, 3.25rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.03);
+}
+
+.form-header {
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.form-header-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2xs);
+  letter-spacing: -0.015em;
+}
+
+.form-header-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Form Fields */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.form-label .required-indicator {
+  color: #D9534F;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  padding: 0.85rem 1rem;
+  transition: all var(--transition-fast);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  background-color: #FFFFFF;
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 1px var(--text-primary);
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--text-primary);
+  border-bottom: 1.5px solid var(--text-primary);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  transition: transform var(--transition-fast);
+}
+
+.form-select {
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-meta-note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.form-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+.btn-submit {
+  padding: 0.95rem 2.2rem;
+  font-size: 0.82rem;
+}
+
+.btn-submit .arrow {
+  transition: transform var(--transition-fast);
+}
+
+.btn-submit:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Form Success & Feedback Notice */
+.form-alert {
+  display: none;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: var(--space-md);
+}
+
+.form-alert.is-success {
+  display: block;
+  background-color: #F0F9F4;
+  border: 1px solid #C2E7D1;
+  color: #1A633B;
+}
+
+.form-alert.is-error {
+  display: block;
+  background-color: #FDF2F2;
+  border: 1px solid #F5C6CB;
+  color: #8A1F1D;
+}
+
+/* --------------------------------------------------------------------------
+   03. LOCATION & STUDIO MAP SECTION
+   -------------------------------------------------------------------------- */
+.contact-location-section {
+  padding: clamp(3.5rem, 6vw, 6rem) 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.location-header-left {
+  max-width: 640px;
+}
+
+.location-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  letter-spacing: -0.015em;
+}
+
+.location-desc {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.location-coords-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.map-frame-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-subtle);
+  overflow: hidden;
+  border: 1px solid var(--border-hairline);
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+}
+
+.map-iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  display: block;
+  filter: grayscale(100%) contrast(1.04) opacity(0.92);
+  transition: filter var(--transition-slow);
+}
+
+.map-frame-wrapper:hover .map-iframe {
+  filter: grayscale(40%) contrast(1.02) opacity(1);
+}
+
+.map-location-tag {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  background-color: rgba(17, 18, 20, 0.88);
+  color: #FFFFFF;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   04. FINAL CTA SECTION
+   -------------------------------------------------------------------------- */
+.contact-final-cta {
+  background-color: var(--bg-primary);
+  padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+  text-align: center;
+}
+
+.contact-final-cta-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  letter-spacing: 0.16em;
+  color: var(--accent-beige);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.final-cta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  letter-spacing: -0.02em;
+}
+
+.final-cta-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.final-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   05. RESPONSIVE MEDIA QUERIES (INTENTIONAL MOBILE LAYOUT)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .location-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location-coords-badge {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+
+  .contact-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-hero-intro {
+    font-size: 1.05rem;
+  }
+
+  .contact-main-section {
+    padding: 2.5rem 0;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .form-header-title {
+    font-size: 1.5rem;
+  }
+
+  .form-submit-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map-iframe {
+    height: 320px;
+  }
+
+  .map-location-tag {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .contact-final-cta {
+    padding: 3.5rem 0;
+  }
+
+  .final-cta-title {
+    font-size: 2.1rem;
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .final-cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
