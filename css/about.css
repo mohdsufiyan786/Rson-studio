@@ -1,0 +1,618 @@
+/* ==========================================================================
+   RSON DESIGN STUDIO — ABOUT PAGE STYLES (EDITORIAL LIGHT THEME)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. ABOUT HERO
+   -------------------------------------------------------------------------- */
+.about-hero {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-primary);
+}
+
+.about-hero-header {
+  max-width: 980px;
+  margin-bottom: var(--space-3xl);
+}
+
+.about-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+
+.about-hero-title em {
+  font-style: italic;
+  color: var(--accent-beige);
+}
+
+.about-hero-lead {
+  font-size: var(--text-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 760px;
+  font-weight: 400;
+}
+
+.about-hero-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  border-radius: var(--radius-subtle);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  background-color: #0B0C0E;
+}
+
+.about-hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.about-hero-banner:hover img {
+  transform: scale(1.02);
+}
+
+.about-banner-badge {
+  position: absolute;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+  border-radius: var(--radius-subtle);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   02. STUDIO INTRODUCTION (GENEROUS WHITESPACE & STRONG TYPOGRAPHY)
+   -------------------------------------------------------------------------- */
+.studio-intro {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+.intro-left-sticky {
+  position: sticky;
+  top: 120px;
+}
+
+.intro-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-top: var(--space-xs);
+}
+
+.intro-tagline em {
+  font-style: italic;
+  color: var(--accent-beige);
+}
+
+.intro-right-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.intro-paragraph {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.intro-paragraph strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.intro-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--border-hairline);
+  margin-top: var(--space-md);
+}
+
+.intro-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.intro-detail-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-beige);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.intro-detail-val {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   03. OUR APPROACH (EDITORIAL SPLIT TIMELINE / PROCESS)
+   -------------------------------------------------------------------------- */
+.approach-section {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-3xl);
+}
+
+.approach-step {
+  display: grid;
+  grid-template-columns: 0.2fr 0.35fr 0.45fr;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--border-hairline);
+  align-items: baseline;
+  transition: background-color var(--transition-fast);
+}
+
+.approach-step:last-child {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.approach-num {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent-beige);
+  letter-spacing: 0.1em;
+}
+
+.approach-name {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.approach-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   04. DESIGN PHILOSOPHY (TYPOGRAPHY & IMAGERY INSTEAD OF ICONS)
+   -------------------------------------------------------------------------- */
+.philosophy-section {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-primary);
+}
+
+.philosophy-quote-box {
+  margin-bottom: var(--space-4xl);
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.philosophy-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-primary);
+  max-width: 1050px;
+}
+
+.philosophy-quote em {
+  font-style: italic;
+  color: var(--accent-beige);
+}
+
+.philosophy-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.philosophy-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.philosophy-media {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-subtle);
+  overflow: hidden;
+  background-color: #0E1014;
+}
+
+.philosophy-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.philosophy-col:hover .philosophy-media img {
+  transform: scale(1.04);
+}
+
+.philosophy-col-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.philosophy-col-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-beige);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.philosophy-col-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.philosophy-col-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   05. EXPERIENCE & VERIFIED CLIENT STATISTICS
+   -------------------------------------------------------------------------- */
+.experience-stats {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.stats-grid-about {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-xl);
+}
+
+.stat-item-about {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--space-lg);
+  border-left: 1px solid var(--border-hairline);
+}
+
+.stat-number-about {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 3.5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.05;
+}
+
+.stat-label-about {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   06. CAPABILITIES (EDITORIAL ARCHITECTURAL LAYOUT)
+   -------------------------------------------------------------------------- */
+.capabilities-section {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-primary);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-3xl);
+}
+
+.capability-block {
+  padding: var(--space-2xl);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.capability-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-beige);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.capability-block:hover {
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.capability-block:hover::before {
+  transform: scaleX(1);
+}
+
+.capability-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.capability-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-beige);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.capability-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: var(--space-sm);
+  line-height: 1.3;
+}
+
+.capability-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-top: var(--space-xs);
+}
+
+.capability-deliverables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.cap-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-secondary);
+  border-radius: var(--radius-subtle);
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   07. TEAM SECTION (AUTHENTIC LEADERSHIP PORTRAITS)
+   -------------------------------------------------------------------------- */
+.team-section {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+  margin-top: var(--space-3xl);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-subtle);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.team-portrait {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: #111214;
+}
+
+.team-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.team-card:hover .team-portrait img {
+  transform: scale(1.03);
+}
+
+.team-info {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-name {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.team-role {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--accent-beige);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.team-bio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: var(--space-xs);
+}
+
+/* --------------------------------------------------------------------------
+   08. FINAL CTA (MATCHING SPECIFICATION)
+   -------------------------------------------------------------------------- */
+.about-cta {
+  padding-top: var(--space-5xl);
+  padding-bottom: var(--space-5xl);
+  background-color: var(--bg-primary);
+}
+
+.about-cta-container {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.about-cta-title {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--text-primary);
+}
+
+.about-cta-title em {
+  font-style: italic;
+  color: var(--accent-beige);
+}
+
+.about-cta-sub {
+  font-size: var(--text-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+/* --------------------------------------------------------------------------
+   09. RESPONSIVE BREAKPOINTS (ABOUT)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .intro-left-sticky {
+    position: static;
+  }
+  .approach-step {
+    grid-template-columns: 0.3fr 1fr;
+    gap: var(--space-md);
+  }
+  .approach-desc {
+    grid-column: 2;
+  }
+  .philosophy-columns {
+    grid-template-columns: 1fr;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats-grid-about {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--space-xl);
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .approach-step {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+  .approach-desc {
+    grid-column: 1;
+  }
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid-about {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .intro-details-grid {
+    grid-template-columns: 1fr;
+  }
+}

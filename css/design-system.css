@@ -1,0 +1,317 @@
+/* ==========================================================================
+   RSON DESIGN STUDIO — ARCHITECTURAL DESIGN SYSTEM (EDITORIAL LIGHT AESTHETIC)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. DESIGN TOKENS & VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Editorial Light Color Palette (Approved Art Direction) */
+  --bg-primary: #FFFFFF;        /* Pure crisp white */
+  --bg-secondary: #F8F8F6;      /* Off-white / Warm alabaster surface */
+  --bg-tertiary: #F1F1ED;       /* Hover states / subtle fill */
+  --bg-dark: #111214;           /* Deep architectural obsidian / ink black */
+  --bg-dark-surface: #181A1F;
+
+  /* Typography Colors */
+  --text-primary: #111214;      /* Deep ink black */
+  --text-secondary: #4E505B;    /* Neutral editorial slate */
+  --text-muted: #828490;        /* Muted captions & technical labels */
+  --text-inverse: #FFFFFF;      /* White text for dark elements */
+
+  /* Warm Muted Beige / Sand Accent (Exact match to reference) */
+  --accent-beige: #A88B64;      /* Warm taupe / architectural gold */
+  --accent-beige-hover: #967A53;
+  --accent-beige-soft: rgba(168, 139, 100, 0.12);
+
+  /* Architectural Hairlines & Dividers */
+  --border-hairline: #EBEBE8;
+  --border-light: #DCDCD8;
+  --border-dark: #111214;
+
+  /* Typography Stacks */
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Grotesk', 'JetBrains Mono', Consolas, monospace;
+
+  /* Typography Scale */
+  --text-hero: clamp(3.2rem, 5.8vw, 5.6rem);
+  --text-display: clamp(2.2rem, 3.8vw, 3.8rem);
+  --text-h1: clamp(1.8rem, 2.8vw, 2.6rem);
+  --text-h2: clamp(1.4rem, 2vw, 1.85rem);
+  --text-h3: clamp(1.15rem, 1.4vw, 1.35rem);
+  --text-body-lg: 1.05rem;      /* 17px */
+  --text-body: 0.95rem;         /* 15.2px */
+  --text-body-sm: 0.85rem;      /* 13.6px */
+  --text-meta: 0.72rem;         /* 11.5px technical monospace */
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;   /* 4px */
+  --space-xs: 0.5rem;     /* 8px */
+  --space-sm: 0.75rem;    /* 12px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4.5rem;    /* 72px */
+  --space-4xl: 6.5rem;    /* 104px */
+  --space-5xl: 8.5rem;    /* 136px */
+
+  /* Container & Structural Bounds */
+  --container-max: 1540px;
+  --container-pad: clamp(1.25rem, 3.5vw, 3.5rem);
+  --header-height: 86px;
+
+  /* Radii (Crisp, Architectural, Refined) */
+  --radius-subtle: 3px;
+  --radius-pill: 9999px;
+
+  /* Transition Easing */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   02. RESET & BASE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--bg-dark);
+  color: var(--bg-primary);
+}
+
+/* --------------------------------------------------------------------------
+   03. TYPOGRAPHY SYSTEM
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.hero-title {
+  font-size: var(--text-hero);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+/* The exact warm italic style seen in the reference mockup */
+.text-beige-italic {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent-beige);
+}
+
+.section-title {
+  font-size: var(--text-display);
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--accent-beige);
+}
+
+/* Eyebrow / Overline */
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.eyebrow-line::before {
+  content: '—';
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--text-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   04. BUTTONS & ACTIONS (MATCHING REFERENCE MOCKUP)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-subtle);
+  transition: all var(--transition-base);
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Solid Black Hero & Header Action Button */
+.btn-black {
+  background-color: var(--bg-dark);
+  color: var(--text-inverse);
+  border: 1px solid var(--bg-dark);
+}
+
+.btn-black:hover {
+  background-color: #23252A;
+  border-color: #23252A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Outline White Hero Button */
+.btn-white-outline {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-dark);
+}
+
+.btn-white-outline:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--bg-dark);
+  transform: translateY(-2px);
+}
+
+/* Editorial Arrow Link */
+.link-editorial {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.link-editorial:hover {
+  color: var(--accent-beige);
+}
+
+.link-editorial span.arrow {
+  transition: transform var(--transition-base);
+}
+
+.link-editorial:hover span.arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   05. CONTAINER & HAIRLINES
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+.hairline {
+  height: 1px;
+  background-color: var(--border-hairline);
+  width: 100%;
+  border: none;
+}
+
+/* --------------------------------------------------------------------------
+   06. ANIMATIONS
+   -------------------------------------------------------------------------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s var(--ease-editorial), transform 0.7s var(--ease-editorial);
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
