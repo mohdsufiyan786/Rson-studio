@@ -116,37 +116,51 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. PROJECT CATEGORY FILTERING (FEATURED WORKS & EXHIBITIONS ARCHIVE)
-  const filterBtns = document.querySelectorAll('.filter-btn, .filter-pill');
-  const projectCards = document.querySelectorAll('.project-card, .exhibit-card');
+  function initFiltering(btnSelector, cardSelector) {
+    const buttons = document.querySelectorAll(btnSelector);
+    const cards = document.querySelectorAll(cardSelector);
+    if (!buttons.length || !cards.length) return;
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        buttons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
 
-      const filterValue = btn.getAttribute('data-filter');
+        const filterValue = (btn.getAttribute('data-filter') || 'all').trim().toLowerCase();
 
-      projectCards.forEach(card => {
-        const rawCategory = card.getAttribute('data-category') || '';
-        const categories = rawCategory.toLowerCase().split(/\s+/);
-        const matches = filterValue === 'all' || categories.includes(filterValue.toLowerCase());
+        cards.forEach(card => {
+          const rawCategory = (card.getAttribute('data-category') || '').trim().toLowerCase();
+          const categories = rawCategory.split(/\s+/);
+          const matches = filterValue === 'all' || categories.includes(filterValue);
 
-        if (matches) {
-          card.style.display = 'flex';
-          setTimeout(() => {
+          if (matches) {
+            card.style.display = 'flex';
+            card.classList.add('is-visible');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            // Force browser layout pass so CSS transition animates smoothly
+            void card.offsetHeight;
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-          }, 20);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
+          } else {
             card.style.display = 'none';
-          }, 300);
-        }
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+          }
+        });
       });
     });
-  });
+  }
+
+  // Initialize Home Featured Works Filter
+  initFiltering('.filter-btn', '.project-card');
+  // Initialize Exhibitions Archive Filter
+  initFiltering('.filter-pill', '.exhibit-card');
 
   // 5. INTERSECTION OBSERVER FOR EDITORIAL REVEALS
   const fadeElements = document.querySelectorAll('.fade-up');

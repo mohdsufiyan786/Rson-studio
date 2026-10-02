@@ -767,6 +767,8 @@
   color: var(--text-secondary);
   background: var(--bg-primary);
   transition: all var(--transition-fast);
+  cursor: pointer;
+  user-select: none;
 }
 
 .filter-btn:hover {
@@ -793,7 +795,7 @@
   border: 1px solid var(--border-hairline);
   border-radius: var(--radius-subtle);
   overflow: hidden;
-  transition: border-color var(--transition-base), transform var(--transition-base);
+  transition: opacity 0.35s ease, transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .project-card:hover {
