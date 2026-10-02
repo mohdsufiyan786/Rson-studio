@@ -495,101 +495,52 @@
               <span>4 STRATEGIC HUBS</span><br>
               <span>DELHI NCR &bull; MUMBAI &bull; HYDERABAD</span>
             </div>
-            <a 
-              id="activeLocationHeaderBtn"
-              href="https://www.google.com/maps/search/?api=1&query=112%2F2+Abhay+Khand+1st+Near+Sai+Baba+Mandir+Indrapuram+Ghaziabad+UP+201014" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="btn btn-outline btn-sm map-direct-link-btn"
-              title="Open currently selected location in Google Maps"
-            >
-              <span>Open in Google Maps</span>
-              <span aria-hidden="true">↗</span>
-            </a>
           </div>
         </div>
 
-        <!-- Location Tab Switcher Nav -->
-        <div class="location-tabs-nav fade-up" role="tablist" aria-label="RSON Office Locations">
-          <button type="button" class="location-tab-btn active" data-loc="office" role="tab" aria-selected="true">
-            <span class="tab-num">01</span>
-            <span>Head Office (Delhi NCR)</span>
-          </button>
-          <button type="button" class="location-tab-btn" data-loc="warehouse" role="tab" aria-selected="false">
-            <span class="tab-num">02</span>
-            <span>Central Warehouse (Ghaziabad)</span>
-          </button>
-          <button type="button" class="location-tab-btn" data-loc="mumbai" role="tab" aria-selected="false">
-            <span class="tab-num">03</span>
-            <span>Mumbai Office (Maharashtra)</span>
-          </button>
-          <button type="button" class="location-tab-btn" data-loc="hyderabad" role="tab" aria-selected="false">
-            <span class="tab-num">04</span>
-            <span>Hyderabad Office (Telangana)</span>
-          </button>
-        </div>
-
-        <!-- Dynamic Clickable Map Frame -->
-        <div class="map-frame-wrapper fade-up">
-          <iframe 
-            id="activeLocationMap"
-            src="https://maps.google.com/maps?q=112/2,+Abhay+Khand+1st,+Near+Sai+Baba+Mandir,+Indirapuram,+Ghaziabad+UP+201014&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-            class="map-iframe" 
-            title="RSON Design Studio Location Map" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
-          <!-- Clickable overlay to open Google Maps in a new tab -->
-          <a 
-            id="activeMapDirectLink"
-            href="https://www.google.com/maps/search/?api=1&query=112%2F2+Abhay+Khand+1st+Near+Sai+Baba+Mandir+Indrapuram+Ghaziabad+UP+201014" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="map-clickable-overlay" 
-            aria-label="Click to open active RSON Design Studio location in Google Maps"
-            title="Click to open in Google Maps"
-          >
-            <div id="activeMapLocationTag" class="map-location-tag">
-              <span>01 / HEAD OFFICE &bull; 112/2 ABHAY KHAND 1ST, INDIRAPURAM</span>
-            </div>
-            <div class="map-open-badge">
-              <span>Open in Google Maps</span>
-              <span class="badge-arrow" aria-hidden="true">↗</span>
-            </div>
-          </a>
-        </div>
-
-        <!-- 4-Card Editorial Location Matrix -->
+        <!-- 4-Card Editorial Location Matrix (Click to Open in Google Maps) -->
         <div class="location-cards-grid fade-up">
           <!-- Card 01: Head Office -->
-          <div class="location-facility-card active" data-loc-card="office">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=112%2F2+Abhay+Khand+1st+Near+Sai+Baba+Mandir+Indirapuram+Ghaziabad+UP+201014" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="location-facility-card" 
+            data-loc-card="office"
+            aria-label="Open Head Office & Design Studio in Google Maps"
+          >
             <div class="facility-card-top">
               <span class="facility-badge">01 / HEADQUARTERS</span>
               <span class="facility-region">DELHI NCR</span>
             </div>
             <h3 class="facility-title">Head Office &amp; Design Studio</h3>
             <p class="facility-address">
-              112/2, Abhay Khand 1st, Near Sai Baba Mandir, Indrapuram, Ghaziabad UP. 201014
+              112/2, Abhay Khand 1st, Near Sai Baba Mandir, Indirapuram, Ghaziabad UP. 201014
             </p>
             <p class="facility-role">
               Principal architectural team, client consultations, 3D CGI simulations, spatial planning and project administration.
             </p>
             <div class="facility-card-footer">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=112%2F2+Abhay+Khand+1st+Near+Sai+Baba+Mandir+Indrapuram+Ghaziabad+UP+201014" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="facility-maps-link"
-              >
+              <span class="facility-maps-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
                 <span>Open in Google Maps</span>
                 <span class="arrow" aria-hidden="true">↗</span>
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 02: Warehouse -->
-          <div class="location-facility-card" data-loc-card="warehouse">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=92%2F2+Jindal+Nagar+Masoori+Near+Bta+Jindal+Pipe+Factory+Ghaziabad+UP+201010" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="location-facility-card" 
+            data-loc-card="warehouse"
+            aria-label="Open Central Fabrication Warehouse in Google Maps"
+          >
             <div class="facility-card-top">
               <span class="facility-badge">02 / WAREHOUSE</span>
               <span class="facility-region">GHAZIABAD UP</span>
@@ -602,20 +553,26 @@
               Dedicated joinery workshop, CNC milling machinery, metal fabrication, spray paint booths, and pre-build dry fit staging.
             </p>
             <div class="facility-card-footer">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=92%2F2+Jindal+Nagar+Masoori+Near+Bta+Jindal+Pipe+Factory+Ghaziabad+UP+201010" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="facility-maps-link"
-              >
+              <span class="facility-maps-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
                 <span>Open in Google Maps</span>
                 <span class="arrow" aria-hidden="true">↗</span>
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 03: Mumbai -->
-          <div class="location-facility-card" data-loc-card="mumbai">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=202+Rimson+Estate+Chincholi+Bunder+Rd+Malad+West+Mumbai+Maharashtra+400064" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="location-facility-card" 
+            data-loc-card="mumbai"
+            aria-label="Open Mumbai Regional Office in Google Maps"
+          >
             <div class="facility-card-top">
               <span class="facility-badge">03 / MUMBAI HUB</span>
               <span class="facility-region">MAHARASHTRA</span>
@@ -628,43 +585,48 @@
               Western region client coordination and on-site execution for Bombay Exhibition Centre (BEC NESCO) &amp; Jio World Convention Centre (JWCC).
             </p>
             <div class="facility-card-footer">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=202+Rimson+Estate+Chincholi+Bunder+Rd+Malad+West+Mumbai+Maharashtra+400064" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="facility-maps-link"
-              >
+              <span class="facility-maps-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
                 <span>Open in Google Maps</span>
                 <span class="arrow" aria-hidden="true">↗</span>
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 04: Hyderabad -->
-          <div class="location-facility-card" data-loc-card="hyderabad">
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Madannaguda,+Jalpally,+Hyderabad,+Telangana+500005" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="location-facility-card" 
+            data-loc-card="hyderabad"
+            aria-label="Open Hyderabad Regional Office in Google Maps"
+          >
             <div class="facility-card-top">
               <span class="facility-badge">04 / HYDERABAD HUB</span>
               <span class="facility-region">TELANGANA</span>
             </div>
             <h3 class="facility-title">Hyderabad Regional Office</h3>
             <p class="facility-address">
-              2/301, Madannaguda, Jalpally, Hyderabad, TG.
+              2/301, Madannaguda, Jalpally, Hyderabad, Telangana. 500005
             </p>
             <p class="facility-role">
               Southern region operations, venue liaison, and turnkey installation servicing HITEX Exhibition Centre and regional spatial clients.
             </p>
             <div class="facility-card-footer">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=2%2F301+Madannaguda+Jalpally+Hyderabad+TG" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="facility-maps-link"
-              >
+              <span class="facility-maps-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
                 <span>Open in Google Maps</span>
                 <span class="arrow" aria-hidden="true">↗</span>
-              </a>
+              </span>
             </div>
-          </div>
+          </a>
         </div>
 
       </div>
@@ -918,77 +880,6 @@
           }, 1500);
         });
       }
-
-      // 4-Office Location Interactive Switcher
-      const locationsData = {
-        office: {
-          tag: '01 / HEAD OFFICE &bull; 112/2 ABHAY KHAND 1ST, INDIRAPURAM',
-          mapSrc: 'https://maps.google.com/maps?q=112/2,+Abhay+Khand+1st,+Near+Sai+Baba+Mandir,+Indirapuram,+Ghaziabad+UP+201014&t=&z=15&ie=UTF8&iwloc=&output=embed',
-          directUrl: 'https://www.google.com/maps/search/?api=1&query=112%2F2+Abhay+Khand+1st+Near+Sai+Baba+Mandir+Indrapuram+Ghaziabad+UP+201014'
-        },
-        warehouse: {
-          tag: '02 / WAREHOUSE &bull; 92/2 JINDAL NAGAR MASOORI, GHAZIABAD',
-          mapSrc: 'https://maps.google.com/maps?q=92/2,+Jindal+Nagar+Masoori,+Near+Bta+Jindal+Pipe+Factory,+Ghaziabad+UP+201010&t=&z=14&ie=UTF8&iwloc=&output=embed',
-          directUrl: 'https://www.google.com/maps/search/?api=1&query=92%2F2+Jindal+Nagar+Masoori+Near+Bta+Jindal+Pipe+Factory+Ghaziabad+UP+201010'
-        },
-        mumbai: {
-          tag: '03 / MUMBAI OFFICE &bull; 202 RIMSON ESTATE, MALAD WEST',
-          mapSrc: 'https://maps.google.com/maps?q=202,+Rimson+Estate,+Chincholi+Bunder+Rd,+Malad+West,+Mumbai,+Maharashtra+400064&t=&z=15&ie=UTF8&iwloc=&output=embed',
-          directUrl: 'https://www.google.com/maps/search/?api=1&query=202+Rimson+Estate+Chincholi+Bunder+Rd+Malad+West+Mumbai+Maharashtra+400064'
-        },
-        hyderabad: {
-          tag: '04 / HYDERABAD OFFICE &bull; 2/301 MADANNAGUDA, JALPALLY',
-          mapSrc: 'https://maps.google.com/maps?q=2/301,+Madannaguda,+Jalpally,+Hyderabad,+TG&t=&z=14&ie=UTF8&iwloc=&output=embed',
-          directUrl: 'https://www.google.com/maps/search/?api=1&query=2%2F301+Madannaguda+Jalpally+Hyderabad+TG'
-        }
-      };
-
-      const tabBtns = document.querySelectorAll('.location-tab-btn');
-      const facilityCards = document.querySelectorAll('.location-facility-card');
-      const activeMapIframe = document.getElementById('activeLocationMap');
-      const activeMapDirectLink = document.getElementById('activeMapDirectLink');
-      const activeMapTag = document.getElementById('activeMapLocationTag');
-      const activeHeaderBtn = document.getElementById('activeLocationHeaderBtn');
-
-      function switchLocation(locKey) {
-        const data = locationsData[locKey];
-        if (!data) return;
-
-        tabBtns.forEach(btn => {
-          const isActive = btn.getAttribute('data-loc') === locKey;
-          btn.classList.toggle('active', isActive);
-          btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        });
-
-        facilityCards.forEach(card => {
-          card.classList.toggle('active', card.getAttribute('data-loc-card') === locKey);
-        });
-
-        if (activeMapIframe) activeMapIframe.src = data.mapSrc;
-        if (activeMapDirectLink) activeMapDirectLink.href = data.directUrl;
-        if (activeHeaderBtn) activeHeaderBtn.href = data.directUrl;
-        if (activeMapTag) activeMapTag.innerHTML = `<span>${data.tag}</span>`;
-      }
-
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const loc = btn.getAttribute('data-loc');
-          switchLocation(loc);
-        });
-      });
-
-      facilityCards.forEach(card => {
-        card.addEventListener('click', (e) => {
-          if (!e.target.closest('.facility-maps-link')) {
-            const loc = card.getAttribute('data-loc-card');
-            switchLocation(loc);
-            const mapWrap = document.querySelector('.map-frame-wrapper');
-            if (mapWrap) {
-              mapWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-          }
-        });
-      });
     });
   </script>
 </body>
