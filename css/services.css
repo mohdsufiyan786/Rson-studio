@@ -148,7 +148,7 @@
 .services-index-link .idx-num {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .services-index-link:hover {
@@ -213,7 +213,7 @@
   font-size: clamp(3.2rem, 5.5vw, 4.8rem);
   line-height: 1;
   font-weight: 400;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
   letter-spacing: -0.02em;
 }
 

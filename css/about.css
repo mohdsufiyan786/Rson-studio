@@ -29,7 +29,7 @@
 
 .about-hero-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .about-hero-lead {
@@ -110,7 +110,7 @@
 
 .intro-tagline em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .intro-right-content {
@@ -240,7 +240,7 @@
 
 .philosophy-quote em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .philosophy-columns {
@@ -551,7 +551,7 @@
 
 .about-cta-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .about-cta-sub {

@@ -24,6 +24,11 @@
   --accent-beige-hover: #967A53;
   --accent-beige-soft: rgba(168, 139, 100, 0.12);
 
+  /* Studio Brand Identity (Logo Orange) */
+  --brand-orange: #DC5400;      /* RSON Logo primary orange */
+  --brand-orange-hover: #C24A00;
+  --brand-orange-soft: rgba(220, 84, 0, 0.12);
+
   /* Architectural Hairlines & Dividers */
   --border-hairline: #EBEBE8;
   --border-light: #DCDCD8;
@@ -158,11 +163,12 @@ h1, h2, h3, h4, .font-serif {
   color: var(--text-primary);
 }
 
-/* The exact warm italic style seen in the reference mockup */
-.text-beige-italic {
+/* Brand accent italic style seen in hero & headings (matches logo orange) */
+.text-beige-italic,
+.text-orange-italic {
   font-style: italic;
   font-weight: 400;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .section-title {
@@ -172,9 +178,11 @@ h1, h2, h3, h4, .font-serif {
   letter-spacing: -0.02em;
 }
 
-.section-title em {
+.section-title em,
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em,
+.hero-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 /* Eyebrow / Overline */

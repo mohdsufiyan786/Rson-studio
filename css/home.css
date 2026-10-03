@@ -702,7 +702,7 @@
 
 .statement-quote em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .statement-principles {
@@ -1155,7 +1155,7 @@
 
 .cta-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .cta-subtitle {

@@ -48,7 +48,7 @@
 
 .exhibitions-hero-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .exhibitions-hero-intro {
@@ -161,7 +161,7 @@
 
 .featured-main-heading em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .featured-index-num {
@@ -516,14 +516,14 @@
 .exhibit-arrow-indicator {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  color: var(--accent-beige);
+  color: var(--text-primary);
   opacity: 0;
   transform: translateX(-4px);
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .exhibit-card:hover .exhibit-title {
-  color: var(--accent-beige);
+  color: var(--text-primary);
 }
 
 .exhibit-card:hover .exhibit-arrow-indicator {
@@ -673,7 +673,7 @@
 
 .exhibitions-cta-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .exhibitions-cta-desc {

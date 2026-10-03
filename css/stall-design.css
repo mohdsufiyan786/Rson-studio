@@ -192,26 +192,35 @@
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
 }
 
-/* Primary Visual Frame */
+/* Primary Visual Frame (Full Image Display, No Cropping) */
 .stall-card-visual {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  background-color: var(--bg-secondary);
+  aspect-ratio: 16 / 9;
+  background-color: #0B0C0E;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stall-card[data-stall-id="oasis"] .stall-card-visual {
+  background-color: #888888;
 }
 
 .stall-card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
-  transition: transform var(--transition-slow);
+  transition: transform var(--transition-slow), filter 0.3s ease;
+  filter: saturate(0.85) contrast(0.96) brightness(0.98);
 }
 
 .stall-card:hover .stall-card-img {
   transform: scale(1.03);
+  filter: saturate(0.88) contrast(0.97) brightness(0.99);
 }
 
 .stall-angles-badge {
@@ -281,12 +290,14 @@
 
 .stall-mini-thumb {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  opacity: 0.85;
+  opacity: 0.88;
+  background-color: #0B0C0E;
   transition: opacity var(--transition-fast), filter var(--transition-fast);
   cursor: pointer;
+  filter: saturate(0.85) contrast(0.96) brightness(0.98);
 }
 
 .stall-mini-thumb:hover {
@@ -492,6 +503,7 @@
   height: auto;
   object-fit: contain;
   display: block;
+  filter: saturate(0.85) contrast(0.96) brightness(0.98);
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 

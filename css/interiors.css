@@ -48,7 +48,7 @@
 
 .interiors-hero-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .interiors-hero-intro {
@@ -168,7 +168,7 @@
 
 .featured-main-heading em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .featured-index-num {
@@ -437,7 +437,7 @@
 
 .gallery-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .gallery-subtitle {
@@ -674,7 +674,7 @@
 
 .capabilities-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .capabilities-intro {
@@ -790,7 +790,7 @@
 
 .story-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .story-desc {
@@ -897,7 +897,7 @@
 
 .cta-main-title em {
   font-style: italic;
-  color: var(--accent-beige);
+  color: var(--brand-orange);
 }
 
 .cta-description {
