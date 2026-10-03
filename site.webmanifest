@@ -1,0 +1,23 @@
+{
+  "name": "RSON Design Studio",
+  "short_name": "RSON Studio",
+  "description": "Spatial Architecture, Exhibition Pavilions & Turnkey Fabrication",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111214",
+  "theme_color": "#111214",
+  "icons": [
+    {
+      "src": "assets/images/logo-cropped.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.rsondesignstudio.com/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.rsondesignstudio.com/assets/images/hero-mockup-pavilion.jpg</image:loc>
+      <image:title>RSON Design Studio — Spatial Architecture &amp; Exhibition Pavilions</image:title>
+      <image:caption>Bespoke exhibition pavilion architecture and turnkey stall fabrication across India</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/exhibitions</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.rsondesignstudio.com/assets/images/matecia-pavilion.jpg</image:loc>
+      <image:title>Exhibitions and Pavilions Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/stall-design</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.rsondesignstudio.com/assets/images/stalls/stall_page_01.jpg</image:loc>
+      <image:title>3D Exhibition Stall Design Concepts Multi-Angle Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/interiors</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.rsondesignstudio.com/assets/images/luxury-interior.webp</image:loc>
+      <image:title>Spatial Interior Architecture Portfolio</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/services</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/about</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.rsondesignstudio.com/contact</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
