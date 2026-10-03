@@ -92,9 +92,7 @@
   padding: 1.25rem 0;
   background-color: #FFFFFF;
   border-bottom: 1px solid var(--border-hairline);
-  position: sticky;
-  top: var(--header-height);
-  z-index: 850;
+  position: static;
   transition: box-shadow var(--transition-base);
 }
 

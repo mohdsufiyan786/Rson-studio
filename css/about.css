@@ -96,8 +96,7 @@
 }
 
 .intro-left-sticky {
-  position: sticky;
-  top: 120px;
+  position: static;
 }
 
 .intro-tagline {

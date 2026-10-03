@@ -111,14 +111,8 @@
 .services-index-bar {
   background-color: #FFFFFF;
   border-bottom: 1px solid var(--border-hairline);
-  position: sticky;
-  top: var(--header-height);
-  z-index: 900;
+  position: static;
   transition: box-shadow var(--transition-base);
-}
-
-.services-index-bar.is-sticky {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .services-index-nav {
@@ -728,7 +722,7 @@
 
   /* Index nav bar horizontal scroll */
   .services-index-bar {
-    top: var(--header-height);
+    position: static;
   }
   
   .services-index-link {
