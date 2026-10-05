@@ -223,7 +223,8 @@
   filter: saturate(0.88) contrast(0.97) brightness(0.99);
 }
 
-.stall-angles-badge {
+.stall-angles-badge,
+.stall-category-badge {
   position: absolute;
   top: var(--space-sm);
   right: var(--space-sm);
@@ -240,9 +241,11 @@
   align-items: center;
   gap: 5px;
   pointer-events: none;
+  z-index: 2;
 }
 
-.stall-angles-badge::before {
+.stall-angles-badge::before,
+.stall-category-badge::before {
   content: '';
   width: 6px;
   height: 6px;
@@ -491,14 +494,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 340px;
-  max-height: 60vh;
+  min-height: 380px;
+  max-height: 72vh;
   overflow: hidden;
 }
 
 .modal-main-image {
   max-width: 100%;
-  max-height: 58vh;
+  max-height: 70vh;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -557,9 +560,9 @@
   backdrop-filter: blur(4px);
 }
 
-/* Modal Thumbnails Strip */
+/* Modal Thumbnails Strip (Hidden for single photo display) */
 .stall-modal-thumbs-bar {
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
