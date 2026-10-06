@@ -13,9 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentNumEl = document.getElementById('heroCurrentNum');
 
   const slideData = [
-    { title: 'Custom Pavilion Architecture — Pragati Maidan', link: 'exhibitions.html' },
-    { title: 'MATECIA Grand Architectural Pavilion — Pragati Maidan', link: 'exhibitions.html' },
-    { title: 'PLASTINDIA Sovereign Pavilion — Bharat Mandapam', link: 'exhibitions.html' }
+    { title: 'Custom Pavilion Architecture — Pragati Maidan', link: 'exhibitions' },
+    { title: 'Craftsman Automation Pavilion — Auto Expo', link: 'exhibitions' },
+    { title: 'MATECIA Grand Architectural Pavilion — Pragati Maidan', link: 'exhibitions' },
+    { title: 'Dr. Willmar Schwabe Bio-Pharma Pavilion — CPHI India', link: 'exhibitions' },
+    { title: 'PLASTINDIA Sovereign Pavilion — Bharat Mandapam', link: 'exhibitions' },
+    { title: 'JSW Paints Official Pavilion — National Expo Circuit', link: 'exhibitions' },
+    { title: 'Om Bhagwati Arts & Handicrafts — IHGF Delhi Fair', link: 'exhibitions' }
   ];
 
   let currentSlide = 0;
