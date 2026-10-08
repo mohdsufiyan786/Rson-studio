@@ -36,20 +36,19 @@
   text-decoration: none;
 }
 
-.header-logo-img {
-  height: 56px;
+.header-logo-img,
+.footer-logo-img {
+  height: 68px;
   width: auto;
-  max-width: 180px;
+  max-width: 220px;
   object-fit: contain;
   display: block;
+  transition: transform var(--transition-fast);
 }
 
-.footer-logo-img {
-  height: 54px;
-  width: auto;
-  max-width: 180px;
-  object-fit: contain;
-  display: block;
+.header-logo-img:hover,
+.footer-logo-img:hover {
+  transform: scale(1.02);
 }
 
 .brand-text {
@@ -482,11 +481,10 @@
   .btn-initiate {
     display: none;
   }
-  .header-logo-img {
-    height: 44px;
-  }
+  .header-logo-img,
   .footer-logo-img {
-    height: 44px;
+    height: 48px;
+    max-width: 170px;
   }
   .brand-name {
     font-size: 1.08rem;

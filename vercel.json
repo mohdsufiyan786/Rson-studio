@@ -1,4 +1,54 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/interior",
+      "destination": "/interiors",
+      "permanent": true
+    },
+    {
+      "source": "/interior.html",
+      "destination": "/interiors",
+      "permanent": true
+    },
+    {
+      "source": "/interiors.html",
+      "destination": "/interiors",
+      "permanent": true
+    },
+    {
+      "source": "/service",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/interiors",
+      "destination": "/interiors.html"
+    },
+    {
+      "source": "/interior",
+      "destination": "/interiors.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/services.html"
+    }
+  ]
 }

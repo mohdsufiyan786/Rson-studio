@@ -21,6 +21,19 @@ const mimeTypes = {
 const server = http.createServer((req, res) => {
   let safePath = path.normalize(decodeURIComponent(req.url.split('?')[0])).replace(/^(\.\.[\/\\])+/, '');
   if (safePath === '/' || safePath === '\\') safePath = '/index.html';
+  
+  // Clean redirects
+  if (safePath === '/interior' || safePath === '\\interior' || safePath === '/interior.html' || safePath === '\\interior.html' || safePath === '/interiors.html' || safePath === '\\interiors.html') {
+    res.writeHead(301, { Location: '/interiors' });
+    res.end();
+    return;
+  }
+  if (safePath === '/service' || safePath === '\\service' || safePath === '/service.html' || safePath === '\\service.html' || safePath === '/services.html' || safePath === '\\services.html') {
+    res.writeHead(301, { Location: '/services' });
+    res.end();
+    return;
+  }
+
   let filePath = path.join(__dirname, safePath);
   if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
     filePath = filePath + '.html';
@@ -28,8 +41,14 @@ const server = http.createServer((req, res) => {
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found');
+      const notFoundPath = path.join(__dirname, '404.html');
+      if (fs.existsSync(notFoundPath)) {
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        fs.createReadStream(notFoundPath).pipe(res);
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('404 Not Found');
+      }
       return;
     }
 

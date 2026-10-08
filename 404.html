@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found — RSON Design Studio</title>
+  <meta name="description" content="The requested architectural page could not be found. Return to RSON Design Studio homepage or explore our services.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon & PWA Icons -->
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/images/logo-cropped.jpeg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#111214">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <style>
+    .error-hero {
+      min-height: calc(85vh - var(--header-height));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-4xl) var(--container-pad);
+      position: relative;
+      background: radial-gradient(circle at 50% 40%, rgba(220, 84, 0, 0.05) 0%, transparent 65%);
+    }
+    .error-code {
+      font-family: var(--font-mono);
+      font-size: clamp(4.5rem, 14vw, 10rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: rgba(220, 84, 0, 0.18);
+      margin-bottom: var(--space-md);
+      user-select: none;
+    }
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--space-md);
+      letter-spacing: -0.02em;
+    }
+    .error-desc {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 0 auto var(--space-2xl) auto;
+      line-height: 1.65;
+    }
+    .error-actions {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/" class="brand-lockup" aria-label="RSON Design Studio Homepage">
+        <img src="assets/images/logo-cropped.jpeg" alt="RSON Design Studio Logo" class="header-logo-img">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="about" class="nav-link">About</a>
+        <a href="exhibitions" class="nav-link">Exhibitions</a>
+        <a href="stall-design" class="nav-link">Stall Design</a>
+        <a href="interiors" class="nav-link">Interiors</a>
+        <a href="services" class="nav-link">Services</a>
+        <a href="contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="contact" class="btn btn-black btn-initiate">
+          <span>INITIATE PROJECT</span>
+          <span aria-hidden="true">→</span>
+        </a>
+        <button class="btn-grid-menu" aria-label="Toggle Navigation & Coordinates Drawer" aria-expanded="false">
+          <div class="grid-dots-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-label="Mobile Navigation Overlay">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><span class="mobile-nav-num">01</span><a href="/" class="mobile-nav-link">Home</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">02</span><a href="about" class="mobile-nav-link">About Studio</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">03</span><a href="exhibitions" class="mobile-nav-link">Exhibitions</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">04</span><a href="stall-design" class="mobile-nav-link">Stall Design</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">05</span><a href="interiors" class="mobile-nav-link">Interiors</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">06</span><a href="services" class="mobile-nav-link">Services</a></li>
+      <li class="mobile-nav-item"><span class="mobile-nav-num">07</span><a href="contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-contact-row">
+        <span class="mobile-contact-label">Studio Coordinates</span>
+        <span class="mobile-contact-val">112/2, Abhay Khand 1st, Indirapuram, Ghaziabad UP 201014 / Noida NCR</span>
+      </div>
+      <div class="mobile-contact-row">
+        <span class="mobile-contact-label">Direct Line</span>
+        <span class="mobile-contact-val">(+91) 78270 56152 &nbsp;·&nbsp; (+91) 74283 85458</span>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="error-hero">
+      <div class="container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-desc">
+          The requested spatial route is unavailable or has moved. Explore our core service capabilities or return to the main studio portfolio.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="btn btn-black">
+            <span>RETURN TO HOMEPAGE</span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="services" class="btn btn-outline">
+            <span>EXPLORE SERVICES</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-studio">
+          <a href="/" class="brand-lockup" aria-label="RSON Design Studio Homepage">
+            <img src="assets/images/logo-cropped.jpeg" alt="RSON Design Studio Logo" class="footer-logo-img">
+          </a>
+          <p class="footer-manifesto">
+            Specializing in high-impact exhibition architecture, turnkey stall fabrication, and bespoke spatial interiors across India's premier expo centers.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Directory</h4>
+          <ul class="footer-list">
+            <li><a href="/" class="footer-link">Home</a></li>
+            <li><a href="about" class="footer-link">About Studio</a></li>
+            <li><a href="exhibitions" class="footer-link">Exhibitions</a></li>
+            <li><a href="stall-design" class="footer-link">Stall Design</a></li>
+            <li><a href="interiors" class="footer-link">Spatial Interiors</a></li>
+            <li><a href="services" class="footer-link">Services &amp; Capabilities</a></li>
+            <li><a href="contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Disciplines</h4>
+          <ul class="footer-list">
+            <li><a href="services#service-01" class="footer-link">Exhibition Pavilions</a></li>
+            <li><a href="services#service-02" class="footer-link">Spatial Interiors</a></li>
+            <li><a href="services#service-03" class="footer-link">3D Visualization</a></li>
+            <li><a href="services#service-04" class="footer-link">Branding &amp; Graphics</a></li>
+            <li><a href="services#service-05" class="footer-link">Turnkey Fabrication</a></li>
+            <li><a href="services#service-06" class="footer-link">Turnkey Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Studio Coordinates</h4>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">Location</span>
+            <p class="footer-contact-val">Indirapuram, Ghaziabad UP / Noida NCR</p>
+          </div>
+          <div class="footer-contact-item">
+            <span class="footer-contact-label">Direct Lines</span>
+            <p class="footer-contact-val">+91 78270 56152 / +91 74283 85458</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 RSON Design Studio. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

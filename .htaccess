@@ -1,0 +1,31 @@
+# RSON Design Studio — Apache Server Configuration
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. 301 Redirect singular to plural
+  RewriteRule ^interior/?$ /interiors [R=301,L]
+  RewriteRule ^interior\.html$ /interiors [R=301,L]
+  RewriteRule ^interiors\.html$ /interiors [R=301,L]
+
+  RewriteRule ^service/?$ /services [R=301,L]
+  RewriteRule ^service\.html$ /services [R=301,L]
+  RewriteRule ^services\.html$ /services [R=301,L]
+
+  # 2. Redirect /index.html to /
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index\.html [NC]
+  RewriteRule ^index\.html$ / [R=301,L]
+
+  # 3. Strip .html extension from direct requests
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # 4. Resolve clean URLs to .html files internally
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Custom 404 Error Document
+ErrorDocument 404 /404.html
